@@ -7,7 +7,7 @@ for i in range(1,11):
 	statsTable = pq(r.text)('.playertableFrameInnerShell')
 	with open('stats/stats-'+str(i)+'.csv', 'w') as csvfile:
 		filewriter = csv.writer(csvfile)
-		for i,row in enumerate(pq(statsTable)('.tableBody')):
+		for row in pq(statsTable)('.tableBody').filter(lambda i:pq(this).attr['bgcolor'] != "#e0e0a8"):
 			rowList = []
 			for cell in pq(row)('td'):
 				rowList.append(pq(cell).text())
