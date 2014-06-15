@@ -12,4 +12,3 @@ for i in range(1,11):
 			for cell in pq(row)('td'):
 				rowList.append(pq(cell).text())
 			filewriter.writerow(rowList)
-print "YAY!"
