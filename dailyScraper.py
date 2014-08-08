@@ -1,6 +1,7 @@
 from pyquery import PyQuery as pq
-import requests
-import csv
+import requests, csv,sys
+
+statsPath = sys.path[0] + "/stats/"
 
 baseUrl = "http://games.espn.go.com/flb/boxscorefull"
 params = {
@@ -23,7 +24,7 @@ def getRowData(row):
 
 for i in range(1,11):
 	params['teamId'] = i
-	with open('stats/dailystats-'+str(i)+'.csv', 'w') as csvfile:
+	with open(statsPath+'dailystats-'+str(i)+'.csv', 'w') as csvfile:
 		filewriter = csv.writer(csvfile)
 		for j in range(1,200):
 			params['scoringPeriodId'] = j
