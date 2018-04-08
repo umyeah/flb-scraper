@@ -1,1 +1,5 @@
 Let's play with some stats
+
+Clone this repo and make a folder called stats
+Use pip to install pyquery
+Can run each script after that and it will put the results in the stats folder
