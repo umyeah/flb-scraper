@@ -6,7 +6,7 @@ statsPath = sys.path[0] + "/stats/"
 baseUrl = "http://games.espn.go.com/flb/boxscorefull"
 params = {
 	"leagueId" : 9042,
-	"seasonId" : 2014,
+	"seasonId" : 2018,
 	"view"     : "scoringperiod",
 	"version"  : "full"
 }
